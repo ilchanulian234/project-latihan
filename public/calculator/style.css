@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.calculator {
+  background: #1a1a2e;
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  max-width: 320px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#display {
+  width: 100%;
+  height: 80px;
+  font-size: 2.5rem;
+  text-align: right;
+  padding: 0 20px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 16px;
+  background: #0f0f23;
+  color: #fff;
+  box-shadow: inset 0 4px 12px rgba(0, 0, 0, 0.5);
+  font-weight: 500;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+button {
+  height: 64px;
+  border: none;
+  border-radius: 20px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+button:nth-child(17) {
+  grid-column: span 2;
+  background: linear-gradient(145deg, #ff6b6b, #ee5a52);
+  color: white;
+  font-size: 2rem;
+}
+
+button:not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(17)) {
+  background: #16213e;
+  color: white;
+}
+
+button:nth-child(1) {
+  background: #f0932b;
+  color: white;
+}
+
+button:nth-child(2) {
+  background: #eb4d4b;
+  color: white;
+}
